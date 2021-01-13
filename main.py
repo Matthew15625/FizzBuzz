@@ -1,23 +1,25 @@
 '''
-keyNumbers = {3:"Fizz", 5:"Buzz"}
-For i <- 1 To 15
+keyNumbers = [3, 5]
+keyWords = ["Fizz", "Buzz"]
+FOR i <- 1 TO 15
     output <- ""
-    For num in keyNumbers.keys
-        if i MOD num = 0 THEN
-            output <- output + keyNumbers[num]
-    if output = "" THEN
+    FOR j <- 1 To 2
+        IF i MOD keyNumbers[j] = 0 THEN
+            output <- output + keyWords[j]
+    IF output = "" THEN
         output = str(i)
-    #python version of if statement above# output = output if output else str(i)
     print(output)
 '''
 
 
-keyNumbers = {3:"Fizz", 5:"Buzz"}
+keyNumbers = [3, 5]
+keyWords = ["Fizz", "Buzz"]
 for i in range(1, 16):
     output = ""
-    for num in list(keyNumbers.keys()):
-        if i % num == 0:
-            output += keyNumbers[num]
-    output = output if output else str(i)
+    for j in range(0, len(keyNumbers)):
+        if i % keyNumbers[j] == 0:
+            output += keyWords[num]
+    if output == "":
+        output = i
 
     print(output)
